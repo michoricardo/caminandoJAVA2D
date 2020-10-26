@@ -1,10 +1,13 @@
 
 package mover_imagen;
-
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class Ventana extends javax.swing.JFrame {
 
-    
     public Ventana() 
     {
         initComponents();
@@ -16,12 +19,16 @@ public class Ventana extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+    	
         boton = new javax.swing.JButton();
         panel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(205, 255, 255));
+        //setBackground(new java.awt.Color(205, 255, 255));
+        //quité el background color
+    	setSize(500,500); //ventana fija
+    	setResizable(false); //falso para que no se salga del cuadrito
+    	setVisible(true);
 
         boton.setText("Activar");
         boton.addActionListener(new java.awt.event.ActionListener() {
@@ -29,8 +36,8 @@ public class Ventana extends javax.swing.JFrame {
                 botonActionPerformed(evt);
             }
         });
-
-        panel.setBackground(new java.awt.Color(205, 255, 255));
+        //se dejó de llamar al background color
+        //panel.setBackground(new java.awt.Color(205, 255, 255));
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
